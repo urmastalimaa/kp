@@ -363,7 +363,7 @@ h1, h2, h3, h4, h5, h6, figure {
     #fh5co-counter .event-wrap p, #fh5co-counter .event-wrap span,
     #fh5co-event .event-wrap p,
     #fh5co-event .event-wrap span {
-      display: block;
+      display: inline-block;
       color: rgba(255, 255, 255, 0.8); }
     #fh5co-counter .event-wrap i,
     #fh5co-event .event-wrap i {
