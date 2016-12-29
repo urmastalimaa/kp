@@ -3,3 +3,16 @@ AuthName "Password Protected Area"
 AuthUserFile /data01/virt61490/domeenid/www.korgipulm.ee/htdocs/.htpasswd
 Require valid-user
 Header set Access-Control-Allow-Origin "*"
+
+SetOutputFilter DEFLATE
+AddOutputFilterByType DEFLATE application/x-httpd-php text/html text/xml text/plain text/css text/javascript application/javascript application/x-javascript image/jpeg image/jpg image/png image/gif font/ttf font/eot font/otf
+
+# properly handle requests coming from behind proxies
+Header append Vary User-Agent
+
+# Properly handle old browsers that do not support compression
+BrowserMatch ^Mozilla/4 gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+# Explicitly exclude binary files from compression just in case
+SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png|pdf|swf|ico|zip|ttf|eot|svg)$ no-gzip
