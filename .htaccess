@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "Password Protected Area"
+AuthUserFile /data01/virt61490/domeenid/www.korgipulm.ee/htdocs/.htpasswd
+Require valid-user
+Header set Access-Control-Allow-Origin "*"
