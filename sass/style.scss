@@ -491,7 +491,7 @@ h1, h2, h3, h4, h5, h6, figure {
 			letter-spacing: 2px;
 		}
 		p,span{
-			display: block;
+			display: inline-block;
 			color: rgba($brand-white,.8);
 		}
 		i{
