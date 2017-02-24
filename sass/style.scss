@@ -1,7 +1,8 @@
 $font-primary: 'Playfair display', serif;
 $font-secondary: 'Times new Roman', Arial, serif;
 
-$font-header: 'Playfair display', serif;
+$header-font: 'Playfair display', serif;
+$text-font: 'Times new Roman', Arial, serif;
 
 $header-color: #ffcc99;
 $text-color: #BBBDC0;
@@ -514,7 +515,7 @@ form {
 			margin-bottom: 0px;
 			font-size: 80px;
 			line-height: 1.5;
-			font-family: $font-header;
+			font-family: $header-font;
       white-space: nowrap;
 			@media screen and (max-width: $screen-sm) {
 				font-size: 40px;
@@ -528,7 +529,7 @@ form {
       letter-spacing: 10px;
 			line-height: 1.5;
 			margin-bottom: 30px;
-			font-family: $font-header;
+			font-family: $header-font;
 			@media screen and (max-width: $screen-xs) {
 				font-size: 16px;
 			}
@@ -628,7 +629,7 @@ form {
 		font-size: 20px;
 		background: $brand-white;
 		padding: 20px;
-		color: $brand-primary;
+		color: $header-color;
 		@include border-radius(50%);
 	}
 	@media screen and (max-width: $screen-sm) {
@@ -642,46 +643,63 @@ form {
 		width: 100%;
 	}
 	h3{
-		font-family: $font-secondary;
-		color: $brand-primary;
+		font-family: $header-font;
+		color: $header-color;
 		font-size: 30px;
 	}
-	.groom,.bride{
-		float: left;
+  $bride-aspect-ratio: 0.67;
+  $groom-aspect-ratio: 0.7;
+  $big-height: 200px;
+  $small-height: 140px;
+
+	.bride{
+		float: right;
+		margin-right: 5px;
 		@include border-radius(50%);
-		// overflow: hidden;
-		// margin-left: 5px;
-		width: 150px;
-		height: 150px;
+    width: calc(#{$big-height} * #{$bride-aspect-ratio});
+		height: $big-height;
 		img{
 			width: 150px;
-			height: 150px;
+			height: $big-height;
 			@include border-radius(50%);
 		}
 		@media screen and (max-width: $screen-xs){
 			width: 100%;
 			height: 140px;
 			img{
-				width: 120px;
-				height: 120px;
+        width: calc(#{$small-height} * #{$bride-aspect-ratio});
+				height: $small-height;
+				margin: 0 auto;
+			}
+		}
+	}
+	.desc-bride{
+		padding-right: 180px;
+		text-align: right;
+	}
+	.groom{
+		float: left;
+		margin-left: 5px;
+		@include border-radius(50%);
+		width: calc(#{$big-height} * #{$groom-aspect-ratio});
+		height: $big-height;
+		img{
+      width: calc(#{$big-height} * #{$groom-aspect-ratio});
+			height: $big-height;
+			@include border-radius(50%);
+		}
+		@media screen and (max-width: $screen-xs){
+			width: 100%;
+			height: 140px;
+			img{
+        width: calc(#{$small-height} * #{$groom-aspect-ratio});
+				height: $small-height;
 				margin: 0 auto;
 
 			}
 		}
 	}
-	.groom{
-		float: right;
-		margin-right: 5px;
-	}
-	.bride{
-		float: left;
-		margin-left: 5px;
-	}
 	.desc-groom{
-		padding-right: 180px;
-		text-align: right;
-	}
-	.desc-bride{
 		padding-left: 180px;
 		text-align: left;
 	}
@@ -691,11 +709,11 @@ form {
 			margin-right: 0;
 		}
 		.desc-groom{
-			padding-right: 0;
+			padding-left: 0;
 			text-align: center;
 		}
 		.desc-bride{
-			padding-left: 0;
+			padding-right: 0;
 			text-align: center;
 		}
 	}
@@ -707,20 +725,25 @@ form {
 		margin-bottom: 2em;
 	}
 	h2 {
-		font-size: 60px;
+		font-size: 50px;
 		margin-bottom: 10px;
 		line-height: 1.5;
 		font-weight: bold;
-		color: $brand-primary;
-		font-family: $font-secondary;
+		color: $header-color;
+		font-family: $header-font;
 		@media screen and (max-width: $screen-sm){
-			font-size: 40px;
+			font-size: 35px;
 		}
 	}
+
+  h3 {
+		color: $text-color;
+		font-family: $text-font;
+  }
 	p {
 		font-size: 18px;
 		line-height: 1.5;
-		color: #828282;
+		color: $text-color;
 	}
 	span{
 		text-transform: uppercase;

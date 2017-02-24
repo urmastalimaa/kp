@@ -483,7 +483,7 @@ form label {
     font-size: 20px;
     background: #fff;
     padding: 20px;
-    color: #85714D;
+    color: #ffcc99;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -499,42 +499,61 @@ form label {
     .couple-half {
       width: 100%; } }
   .couple-half h3 {
-    font-family: "Times new Roman", Arial, serif;
-    color: #85714D;
+    font-family: "Playfair display", serif;
+    color: #ffcc99;
     font-size: 30px; }
-  .couple-half .groom, .couple-half .bride {
-    float: left;
+  .couple-half .bride {
+    float: right;
+    margin-right: 5px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     border-radius: 50%;
-    width: 150px;
-    height: 150px; }
-    .couple-half .groom img, .couple-half .bride img {
+    width: calc(200px * 0.67);
+    height: 200px; }
+    .couple-half .bride img {
       width: 150px;
-      height: 150px;
+      height: 200px;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
       -ms-border-radius: 50%;
       border-radius: 50%; }
     @media screen and (max-width: 480px) {
-      .couple-half .groom, .couple-half .bride {
+      .couple-half .bride {
         width: 100%;
         height: 140px; }
-        .couple-half .groom img, .couple-half .bride img {
-          width: 120px;
-          height: 120px;
+        .couple-half .bride img {
+          width: calc(140px * 0.67);
+          height: 140px;
           margin: 0 auto; } }
-  .couple-half .groom {
-    float: right;
-    margin-right: 5px; }
-  .couple-half .bride {
-    float: left;
-    margin-left: 5px; }
-  .couple-half .desc-groom {
+  .couple-half .desc-bride {
     padding-right: 180px;
     text-align: right; }
-  .couple-half .desc-bride {
+  .couple-half .groom {
+    float: left;
+    margin-left: 5px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    width: calc(200px * 0.7);
+    height: 200px; }
+    .couple-half .groom img {
+      width: calc(200px * 0.7);
+      height: 200px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%; }
+    @media screen and (max-width: 480px) {
+      .couple-half .groom {
+        width: 100%;
+        height: 140px; }
+        .couple-half .groom img {
+          width: calc(140px * 0.7);
+          height: 140px;
+          margin: 0 auto; } }
+  .couple-half .desc-groom {
     padding-left: 180px;
     text-align: left; }
   @media screen and (max-width: 480px) {
@@ -542,10 +561,10 @@ form label {
       margin-left: 0;
       margin-right: 0; }
     .couple-half .desc-groom {
-      padding-right: 0;
+      padding-left: 0;
       text-align: center; }
     .couple-half .desc-bride {
-      padding-left: 0;
+      padding-right: 0;
       text-align: center; } }
 
 .fh5co-heading {
@@ -553,19 +572,22 @@ form label {
   .fh5co-heading.fh5co-heading-sm {
     margin-bottom: 2em; }
   .fh5co-heading h2 {
-    font-size: 60px;
+    font-size: 50px;
     margin-bottom: 10px;
     line-height: 1.5;
     font-weight: bold;
-    color: #85714D;
-    font-family: "Times new Roman", Arial, serif; }
+    color: #ffcc99;
+    font-family: "Playfair display", serif; }
     @media screen and (max-width: 768px) {
       .fh5co-heading h2 {
-        font-size: 40px; } }
+        font-size: 35px; } }
+  .fh5co-heading h3 {
+    color: #BBBDC0;
+    font-family: "Times new Roman", Arial, serif; }
   .fh5co-heading p {
     font-size: 18px;
     line-height: 1.5;
-    color: #828282; }
+    color: #BBBDC0; }
   .fh5co-heading span {
     text-transform: uppercase;
     font-size: 13px;
