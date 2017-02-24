@@ -78,13 +78,13 @@ h1, h2, h3, h4, h5, h6, figure {
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  position: relative; }
+  position: relative;
+  width: 100%; }
 
-.fh5co-bg {
-  background-position: center center;
-  width: 100%;
-  float: left;
-  position: relative; }
+.footer-bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center; }
 
 .fh5co-cover {
   height: 900px;
@@ -131,8 +131,7 @@ h1, h2, h3, h4, h5, h6, figure {
           height: 400px; } }
 
 #fh5co-event {
-  height: 600px;
-  float: left; }
+  height: 600px; }
   #fh5co-event .display-t,
   #fh5co-event .display-tc {
     height: 550px;
@@ -528,6 +527,15 @@ form label {
     letter-spacing: 2px;
     font-weight: 600;
     color: rgba(0, 0, 0, 0.4); }
+
+#registration .fh5co-heading {
+  margin-bottom: 2em; }
+
+#registrationQuery {
+  font-family: "Times new Roman", Arial, serif;
+  color: #BBBDC0;
+  font-size: 22px;
+  text-shadow: 0px 0px 0px; }
 
 #what-to-bring {
   position: relative;

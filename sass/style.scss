@@ -176,13 +176,15 @@ h1, h2, h3, h4, h5, h6, figure {
 	background-position: top center;
 	background-repeat: no-repeat;
 	position: relative;
-}
-.fh5co-bg {
-	background-position: center center;
 	width: 100%;
-	float: left;
-	position: relative;
 }
+
+.footer-bg {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
 
 .fh5co-cover {
 	height: 900px;
@@ -248,10 +250,11 @@ h1, h2, h3, h4, h5, h6, figure {
 	.fh5co-heading{
     margin-top: 2em;
 		h2{
-			color: $brand-white;
+			color: $header-color;
+      font-family: $header-font;
 		}
 		span{
-			color: rgba($brand-white,.5);
+			color: rgba($text-color,.5);
 			text-transform: uppercase;
 			font-size: 13px;
 			letter-spacing: 2px;
@@ -667,6 +670,19 @@ form {
 	}
 }
 
+#registration {
+  .fh5co-heading {
+    margin-bottom: 2em;
+  }
+}
+
+#registrationQuery {
+  font-family: $text-font;
+  color: $text-color;
+  font-size: 22px;
+  text-shadow: 0px 0px 0px;
+}
+
 #what-to-bring {
 	position: relative;
   margin-bottom: 50px;
@@ -679,7 +695,8 @@ form {
 		p{
       line-height: 2.5;
 			color: $text-color;
-      font-size: 20px;
+      font-size: 22px;
+      text-shadow: 0px 0px 0px;
 			font-family: $text-font;
 		}
 	}
