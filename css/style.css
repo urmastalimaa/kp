@@ -538,12 +538,19 @@ form label {
   #what-to-bring .fh5co-heading p {
     line-height: 2.5;
     color: #BBBDC0;
-    font-size: 20px;
+    font-size: 22px;
+    text-shadow: 0px 0px 0px;
     font-family: "Times new Roman", Arial, serif; }
   #what-to-bring .fh5co-heading {
     margin-bottom: 30px; }
     #what-to-bring .fh5co-heading h2 {
       margin-bottom: 0; }
+
+div:after {
+  clear: both; }
+
+.container:after {
+  clear: both; }
 
 #fh5co-footer {
   clear: both;
