@@ -495,6 +495,13 @@ form label {
 .couple-half {
   width: 50%;
   float: left; }
+  .couple-half.full {
+    width: 100%; }
+    .couple-half.full .desc-bride, .couple-half.full .desc-groom {
+      display: table;
+      text-align: center; }
+    .couple-half.full .bride {
+      float: left; }
   @media screen and (max-width: 768px) {
     .couple-half {
       width: 100%; } }
@@ -567,6 +574,81 @@ form label {
       padding-right: 0;
       text-align: center; } }
 
+.couple-description {
+  width: 100%; }
+  .couple-description h3 {
+    font-family: "Playfair display", serif;
+    color: #ffcc99;
+    font-size: 50px; }
+  .couple-description .bride {
+    float: right;
+    margin-top: 150px;
+    margin-left: 50px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    width: calc(450px * 0.67);
+    height: 450px; }
+    .couple-description .bride img {
+      width: 270px;
+      height: 450px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%; }
+    @media screen and (max-width: 480px) {
+      .couple-description .bride {
+        width: 100%;
+        height: 140px; }
+        .couple-description .bride img {
+          width: calc(240px * 0.67);
+          height: 240px;
+          margin: 0 auto; } }
+  .couple-description .desc-bride {
+    padding-top: 50px;
+    text-align: left;
+    display: table; }
+  .couple-description .groom {
+    margin-top: 150px;
+    margin-right: 50px;
+    float: left;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    width: calc(450px * 0.7);
+    height: 450px; }
+    .couple-description .groom img {
+      width: 270px;
+      height: 450px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%; }
+    @media screen and (max-width: 480px) {
+      .couple-description .groom {
+        width: 100%;
+        height: 140px; }
+        .couple-description .groom img {
+          width: calc(240px * 0.7);
+          height: 240px;
+          margin: 0 auto; } }
+  .couple-description .desc-groom {
+    padding-top: 50px;
+    display: table;
+    text-align: left; }
+  @media screen and (max-width: 480px) {
+    .couple-description .groom, .couple-description .bride {
+      margin-left: 0;
+      margin-right: 0; }
+    .couple-description .desc-groom {
+      padding-left: 0;
+      text-align: center; }
+    .couple-description .desc-bride {
+      padding-right: 0;
+      text-align: center; } }
+
 .fh5co-heading {
   margin-bottom: 5em; }
   .fh5co-heading.fh5co-heading-sm {
@@ -595,68 +677,26 @@ form label {
     font-weight: 600;
     color: rgba(0, 0, 0, 0.4); }
 
-#fh5co-started {
-  position: relative; }
-  #fh5co-started .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4); }
-  #fh5co-started .fh5co-heading h2 {
-    color: #fff; }
-  #fh5co-started .fh5co-heading p {
-    color: rgba(255, 255, 255, 0.5); }
-  #fh5co-started .form-control {
-    background: rgba(255, 255, 255, 0.2);
-    border: none !important;
-    color: #fff;
-    font-size: 16px !important;
-    width: 100%;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s; }
-    #fh5co-started .form-control::-webkit-input-placeholder {
-      color: #fff; }
-    #fh5co-started .form-control:-moz-placeholder {
-      /* Firefox 18- */
-      color: #fff; }
-    #fh5co-started .form-control::-moz-placeholder {
-      /* Firefox 19+ */
-      color: #fff; }
-    #fh5co-started .form-control:-ms-input-placeholder {
-      color: #fff; }
-    #fh5co-started .form-control:focus {
-      background: rgba(255, 255, 255, 0.3); }
-  #fh5co-started .btn {
-    height: 54px;
-    border: none !important;
-    background: #85714D;
-    color: #fff;
-    font-size: 16px;
-    text-transform: uppercase;
-    font-weight: 400;
-    padding-left: 50px;
-    padding-right: 50px; }
-  #fh5co-started .form-inline .form-group {
-    width: 100% !important;
-    margin-bottom: 10px; }
-    #fh5co-started .form-inline .form-group .form-control {
-      width: 100%; }
-  #fh5co-started .fh5co-heading {
+#what-to-bring {
+  position: relative;
+  margin-bottom: 50px; }
+  #what-to-bring .fh5co-heading h2 {
+    color: #ffcc99;
+    font-family: "Playfair display", serif; }
+  #what-to-bring .fh5co-heading p {
+    color: #BBBDC0;
+    color: #BBBDC0; }
+  #what-to-bring .fh5co-heading {
     margin-bottom: 30px; }
-    #fh5co-started .fh5co-heading h2 {
+    #what-to-bring .fh5co-heading h2 {
       margin-bottom: 0; }
 
-@media screen and (max-width: 768px) {
-  #fh5co-footer .copyright .pull-left,
-  #fh5co-footer .copyright .pull-right {
-    float: none !important;
-    text-align: center; } }
-
-#fh5co-footer .copyright .block {
-  display: block; }
+#fh5co-footer {
+  padding: 2em 0;
+  text-align: center;
+  color: #BBBDC0;
+  font-family: "Times new Roman", Arial, serif;
+  font-size: 24px; }
 
 .uppercase {
   font-size: 14px;

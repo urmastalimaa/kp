@@ -638,6 +638,18 @@ form {
 }
 .couple-half{
 	width: 50%;
+  &.full {
+    width: 100%;
+
+    .desc-bride, .desc-groom {
+      display: table;
+      text-align: center;
+    }
+
+    .bride {
+      float: left;
+    } 
+  }
 	float: left;
 	@media screen and (max-width: $screen-sm){
 		width: 100%;
@@ -719,6 +731,90 @@ form {
 	}
 }
 
+.couple-description {
+  width: 100%;
+
+	h3{
+		font-family: $header-font;
+		color: $header-color;
+		font-size: 50px;
+	}
+  $bride-aspect-ratio: 0.67;
+  $groom-aspect-ratio: 0.7;
+  $big-height: 450px;
+  $small-height: 240px;
+
+	.bride{
+		float: right;
+    margin-top: 150px;
+    margin-left: 50px;
+		@include border-radius(50%);
+    width: calc(#{$big-height} * #{$bride-aspect-ratio});
+		height: $big-height;
+		img{
+			width: 270px;
+			height: $big-height;
+			@include border-radius(50%);
+		}
+		@media screen and (max-width: $screen-xs){
+			width: 100%;
+			height: 140px;
+			img{
+        width: calc(#{$small-height} * #{$bride-aspect-ratio});
+				height: $small-height;
+				margin: 0 auto;
+			}
+		}
+	}
+	.desc-bride{
+    padding-top: 50px;
+		text-align: left;
+    display: table;
+	}
+	.groom{
+    margin-top: 150px;
+    margin-right: 50px;
+		float: left;
+		@include border-radius(50%);
+		width: calc(#{$big-height} * #{$groom-aspect-ratio});
+		height: $big-height;
+		img{
+      width: 270px;
+			height: $big-height;
+			@include border-radius(50%);
+		}
+		@media screen and (max-width: $screen-xs){
+			width: 100%;
+			height: 140px;
+			img{
+        width: calc(#{$small-height} * #{$groom-aspect-ratio});
+				height: $small-height;
+				margin: 0 auto;
+
+			}
+		}
+	}
+	.desc-groom{
+    padding-top: 50px;
+    display: table;
+		text-align: left;
+	}
+	@media screen and (max-width: $screen-xs){
+		.groom,.bride{
+			margin-left: 0;
+			margin-right: 0;
+		}
+		.desc-groom{
+			padding-left: 0;
+			text-align: center;
+		}
+		.desc-bride{
+			padding-right: 0;
+			text-align: center;
+		}
+	}
+}
+
 .fh5co-heading {
 	margin-bottom: 5em;
 	&.fh5co-heading-sm {
@@ -754,74 +850,21 @@ form {
 	}
 }
 
-#fh5co-started {
+#what-to-bring {
 	position: relative;
-	.overlay {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: rgba(0, 0, 0, .4);
-	}
+  margin-bottom: 50px;
+
 	.fh5co-heading {
 		h2 {
-			color: $brand-white;
+			color: $header-color;
+			font-family: $header-font;
 		}
 		p{
-			color: rgba($brand-white,.5);
+			color: $text-color;
+			color: $text-color;
 		}
 	}
 
-	.form-control {
-		background: rgba(255,255,255,.2);
-		border: none!important;
-		color: $brand-white;
-		font-size: 16px!important;
-		width: 100%;
-
-
-		&::-webkit-input-placeholder {
-		   color: $brand-white;
-		}
-
-		&:-moz-placeholder { /* Firefox 18- */
-		   color: $brand-white;  
-		}
-
-		&::-moz-placeholder {  /* Firefox 19+ */
-		   color: $brand-white;  
-		}
-
-		&:-ms-input-placeholder {  
-		   color: $brand-white;  
-		}
-		@include transition(.5s);
-		&:focus {
-			background: rgba(255,255,255,.3);
-		}
-
-	}
-	.btn {
-		height: 54px;
-		border: none!important;
-		background: $brand-primary;
-		color: $brand-white;
-		font-size: 16px;
-		text-transform: uppercase;
-		font-weight: 400;
-		padding-left: 50px;
-		padding-right: 50px;
-	}
-	.form-inline {
-		.form-group {
-			width: 100%!important;
-			margin-bottom: 10px;
-			.form-control {
-				width: 100%;
-			}
-		}
-	}
 	.fh5co-heading {
 		margin-bottom: 30px;
 		h2 {
@@ -831,20 +874,11 @@ form {
 }
 
 #fh5co-footer {
-
-	.copyright {
-		.pull-left,
-		.pull-right {
-			@media screen and (max-width: $screen-sm) {
-				float: none!important;
-				// margin-bottom: 0;
-				text-align: center;
-			}
-		}
-		.block {
-			display: block;
-		}
-	}
+	padding: 2em 0;
+  text-align: center;
+  color: $text-color;
+  font-family: $text-font;
+  font-size: 24px;
 }
 
 .uppercase {
