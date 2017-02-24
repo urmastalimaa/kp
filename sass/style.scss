@@ -1,6 +1,3 @@
-$font-primary: 'Playfair display', serif;
-$font-secondary: 'Times new Roman', Arial, serif;
-
 $header-font: 'Playfair display', serif;
 $text-font: 'Times new Roman', Arial, serif;
 
@@ -110,11 +107,11 @@ $form-group-margin-bottom:       30px !default;
 * ======================================================= */
 
 body {
-	font-family: $font-primary;
+	font-family: $text-font;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.7;
-	color: #828282;
+	color: $text-color;
 	background: #fff;
 }
 #page {
@@ -154,8 +151,8 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6, figure {
-	color: $brand-black;
-	font-family: $font-primary;
+	color: $header-color;
+	font-family: $header-font;
 	font-weight: 400;
 	margin: 0 0 20px 0;
 }
@@ -239,7 +236,6 @@ h1, h2, h3, h4, h5, h6, figure {
 
 #fh5co-event {
 	height: 600px;
-	float: left;
 	.display-t,
 	.display-tc {
 		height: 550px;
@@ -280,8 +276,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 
 	.event-wrap{
-		border: 2px solid rgba($brand-white,.5);
-		background:rgba($brand-white,.1);
+		border: 2px solid rgba($text-color,.5);
 		padding: 30px;
 		width: 100%;
     height: 60%;
@@ -291,9 +286,11 @@ h1, h2, h3, h4, h5, h6, figure {
 			margin-bottom: 10px;
 		}
 		h3{
-			font-size: 20px;
-			color: $brand-white;
-			border-bottom: 1px solid rgba($brand-white,.5);
+			font-size: 28px;
+      font-weight: 700;
+			color: $header-color;
+      font-family: $header-font;
+			border-bottom: 1px solid rgba($text-color,.5);
 			display: block;
 			padding-bottom: 20px;
 			text-transform: uppercase;
@@ -301,11 +298,14 @@ h1, h2, h3, h4, h5, h6, figure {
 		}
 		p,span{
 			display: inline-block;
-			color: rgba($brand-white,.8);
+			color: rgba($text-color,.8);
+      font-family: $text-font;
+			font-size: 18px;
 		}
 		i{
-			color: rgba($brand-white,1);
-			font-size: 20px;
+			color: rgba($text-color,1);
+      font-family: $text-font;
+			font-size: 24px;
 		}
 		.event-col{
 			width: 50%;
@@ -877,7 +877,7 @@ form {
 .btn {
 	margin-right: 4px;
 	margin-bottom: 4px;
-	font-family: $font-primary;
+	font-family: $text-font;
 	font-size: 16px;
 	font-weight: 400;
 	@include border-radius(30px);
