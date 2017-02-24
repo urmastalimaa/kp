@@ -1,6 +1,10 @@
-$font-primary: 'Work Sans', Arial, sans-serif;
-$font-secondary: 'Sacramento', Arial, serif;
+$font-primary: 'Playfair display', serif;
+$font-secondary: 'Times new Roman', Arial, serif;
 
+$font-header: 'Playfair display', serif;
+
+$header-color: #ffcc99;
+$text-color: #BBBDC0;
 
 // Overrides
 $grid-gutter-width: 40px !default; 
@@ -207,7 +211,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	}
 	.display-t,
 	.display-tc {
-		height: 900px;
+		height: 600px;
 		display: table;
 		width: 100%;
 		@media screen and (max-width: $screen-sm) {
@@ -495,7 +499,7 @@ form {
 }
 
 
-#fh5co-header,
+#header,
 #fh5co-counter,
 .fh5co-cover {
 	.display-tc {
@@ -504,13 +508,14 @@ form {
 		h1, h2 {
 			margin: 0;
 			padding: 0;
-			color: rgba(255,255,255,1);
+			color: $header-color;
 		}
 		h1 {
 			margin-bottom: 0px;
-			font-size: 100px;
+			font-size: 80px;
 			line-height: 1.5;
-			font-family: $font-secondary;
+			font-family: $font-header;
+      white-space: nowrap;
 			@media screen and (max-width: $screen-sm) {
 				font-size: 40px;
 			}
@@ -519,26 +524,13 @@ form {
 			}
 		}
 		h2 {
-			font-size: 20px;
+			font-size: 24px;
+      letter-spacing: 10px;
 			line-height: 1.5;
 			margin-bottom: 30px;
+			font-family: $font-header;
 			@media screen and (max-width: $screen-xs) {
 				font-size: 16px;
-			}
-		}
-		.btn {
-			padding: 15px 20px;
-			background: $brand-white!important;
-			color: $brand-primary;
-			border: none!important;
-			font-size: 14px;
-			text-transform: uppercase;
-			// @include border-radius(2px);
-			&:hover {
-				background: $brand-white!important;
-				-webkit-box-shadow: 0px 14px 30px -15px rgba(0,0,0,0.75)!important;
-				-moz-box-shadow: 0px 14px 30px -15px rgba(0,0,0,0.75)!important;
-				box-shadow: 0px 14px 30px -15px rgba(0,0,0,0.75)!important;
 			}
 		}
 	}
