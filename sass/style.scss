@@ -567,9 +567,9 @@ form {
 		color: $header-color;
 		font-size: 50px;
 	}
-  $bride-aspect-ratio: 0.67;
+  $bride-aspect-ratio: 0.6662;
   $groom-aspect-ratio: 0.7;
-  $big-height: 450px;
+  $big-height: 452px;
   $small-height: 240px;
 
 	.bride{
@@ -580,13 +580,13 @@ form {
     width: calc(#{$big-height} * #{$bride-aspect-ratio});
 		height: $big-height;
 		img{
-			width: 270px;
+      width: calc(#{$big-height} * #{$bride-aspect-ratio});
 			height: $big-height;
 			@include border-radius(50%);
 		}
 		@media screen and (max-width: $screen-xs){
-			width: 100%;
-			height: 140px;
+      width: calc(#{$small-height} * #{$bride-aspect-ratio});
+			height: $small-height;
 			img{
         width: calc(#{$small-height} * #{$bride-aspect-ratio});
 				height: $small-height;
@@ -607,15 +607,15 @@ form {
 		width: calc(#{$big-height} * #{$groom-aspect-ratio});
 		height: $big-height;
 		img{
-      width: 270px;
+      width: calc(#{$big-height} * #{$bride-aspect-ratio});
 			height: $big-height;
 			@include border-radius(50%);
 		}
 		@media screen and (max-width: $screen-xs){
-			width: 100%;
-			height: 140px;
+      width: calc(#{$small-height} * #{$bride-aspect-ratio});
+			height: $small-height;
 			img{
-        width: calc(#{$small-height} * #{$groom-aspect-ratio});
+        width: calc(#{$small-height} * #{$bride-aspect-ratio});
 				height: $small-height;
 				margin: 0 auto;
 
