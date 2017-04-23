@@ -1,5 +1,13 @@
+@font-face {
+  font-family: 'Milton One';
+  src: url('../fonts/MiltonOneBold.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/MiltonOneBold.ttf')  format('truetype') /* Safari, Android, iOS */
+}
+
+$main-header-font: 'Milton One', serif;
 $header-font: 'Playfair display', serif;
 $text-font: 'Times new Roman', Arial, serif;
+
 
 $header-color: #ffcc99;
 $text-color: #BBBDC0;
@@ -353,15 +361,15 @@ form {
 		}
 		h1 {
 			margin-bottom: 0px;
-			font-size: 80px;
+			font-size: 10em;
 			line-height: 1.5;
-			font-family: $header-font;
+			font-family: $main-header-font;
       white-space: nowrap;
 			@media screen and (max-width: $screen-sm) {
-				font-size: 40px;
+				font-size: 6em;
 			}
 			@media screen and (max-width: $screen-xs) {
-				font-size: 30px;
+				font-size: 4em;
 			}
 		}
 		h2 {
