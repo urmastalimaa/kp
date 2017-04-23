@@ -1,4 +1,8 @@
 @font-face {
+  font-family: 'Milton One';
+  src: url("../fonts/MiltonOneBold.woff") format("woff"), url("../fonts/MiltonOneBold.ttf") format("truetype"); }
+
+@font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
   src: url("../fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), url("../fonts/icomoon/icomoon.woff?srf3rx") format("woff"), url("../fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
@@ -237,20 +241,20 @@ form label {
     #fh5co-counter .display-tc h1,
     .fh5co-cover .display-tc h1 {
       margin-bottom: 0px;
-      font-size: 80px;
+      font-size: 10em;
       line-height: 1.5;
-      font-family: "Playfair display", serif;
+      font-family: "Milton One", serif;
       white-space: nowrap; }
       @media screen and (max-width: 768px) {
         #header .display-tc h1,
         #fh5co-counter .display-tc h1,
         .fh5co-cover .display-tc h1 {
-          font-size: 40px; } }
+          font-size: 6em; } }
       @media screen and (max-width: 480px) {
         #header .display-tc h1,
         #fh5co-counter .display-tc h1,
         .fh5co-cover .display-tc h1 {
-          font-size: 30px; } }
+          font-size: 4em; } }
     #header .display-tc h2,
     #fh5co-counter .display-tc h2,
     .fh5co-cover .display-tc h2 {
