@@ -14,6 +14,20 @@
     $("#rsvp-form select,input,textarea").prop('disabled', true);
   }
 
+  function disableRsvpClear() {
+    $("#rsvp-form button#clear").hide();
+  }
+
+  function enableRsvpClear() {
+    $("#rsvp-form button#clear").show();
+  }
+
+  function clearRsvp() {
+    disableRsvpClear();
+    $("#rsvp-form button[type='submit']").show();
+    $("#rsvp-form select,input,textarea").prop('disabled', false);
+  }
+
   function onRsvpSuccess() {
     localStorage[rsvpSubmissionKey] = "true";
     $("#formResult")
@@ -50,6 +64,12 @@
         .text("Sinu registreerimine on salvestatud")
         .addClass("alert-success");
       disableRsvpForm();
+      $('button#clear').on('click', function(event) {
+        localStorage[rsvpSubmissionKey] = "false";
+        clearRsvp();
+      });
+    } else {
+      disableRsvpClear();
     }
 
     $("#rsvp-form").validator().on('submit', function(event){
