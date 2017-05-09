@@ -77,7 +77,7 @@
     }
 
     $("#rsvp-form").validator().on('submit', function(event){
-      var formTargetURL = "https://formspree.io/urmas.talimaa@gmail.com";
+      var formTargetURL = "https://formspree.io/reinumagi.dagmar@gmail.com";
       if (!event.isDefaultPrevented()) {
         event.preventDefault();
         localStorage[rsvpSubmissionKey] = "true";
