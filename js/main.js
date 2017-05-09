@@ -32,9 +32,9 @@
     var $target = $("#rsvp-form");
     return {
       nimi: $target.find("#inputName").val(),
-      email: $target.find("#inputEmail").val(),
       osalemine: $target.find("#inputOsalemine option:selected").text(),
       saabumine: $target.find("#inputSaabumine option:selected").text(),
+      lahkumine: $target.find("#inputLahkumine option:selected").text(),
       erisoovid: $target.find("#inputErisoovid").val(),
       _next: "/form/thanks.html"
     };
