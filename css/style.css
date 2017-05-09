@@ -196,7 +196,8 @@ h1, h2, h3, h4, h5, h6, figure {
       display: inline-block;
       color: rgba(187, 189, 192, 0.8);
       font-family: "Times new Roman", Arial, serif;
-      font-size: 18px; }
+      font-size: 18px;
+      text-shadow: 0px 0px #BBBDC0; }
     #fh5co-event .event-wrap i {
       color: #bbbdc0;
       font-family: "Times new Roman", Arial, serif;
