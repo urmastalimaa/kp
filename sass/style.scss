@@ -790,6 +790,13 @@ div {
 	}
 }
 
+.form-group {
+  .btn-primary {
+    background: $brand-secondary;
+    border: 2px solid $brand-secondary;
+  }
+}
+
 #rsvp-form {
   margin-left: 20px;
   margin-right: 20px;

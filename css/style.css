@@ -621,6 +621,10 @@ div:after {
       background: #85714D;
       color: #fff; }
 
+.form-group .btn-primary {
+  background: #7A4183;
+  border: 2px solid #7A4183; }
+
 #rsvp-form {
   margin-left: 20px;
   margin-right: 20px; }
