@@ -312,6 +312,7 @@ h1, h2, h3, h4, h5, h6, figure {
 			color: rgba($text-color,.8);
       font-family: $text-font;
 			font-size: 18px;
+      text-shadow: 0px 0px $text-color;
 		}
 		i{
 			color: rgba($text-color,1);
