@@ -28,24 +28,6 @@
     $("#rsvp-form select,input,textarea").prop('disabled', false);
   }
 
-  function onRsvpSuccess() {
-    localStorage[rsvpSubmissionKey] = "true";
-    $("#formResult")
-      .removeClass("alert-danger")
-      .addClass("alert-success")
-      .text("Aitäh! Sinu registreerimine on salvestatud")
-      .show();
-    disableRsvpForm();
-  }
-
-  function onRsvpFail() {
-    $("#formResult")
-      .removeClass("alert-success")
-      .addClass("alert-danger")
-      .text("Registreerimisel tekkis viga. Proovi hiljem uuesti")
-      .show();
-  }
-
   function gatherFormData() {
     var $target = $("#rsvp-form");
     return {
@@ -57,6 +39,28 @@
       _next: "/form/thanks.html"
     };
   }
+
+  $.extend(
+{
+    redirectPost: function(location, args)
+    {
+        var form = $('<form></form>');
+        form.attr("method", "post");
+        form.attr("action", location);
+
+        $.each( args, function( key, value ) {
+            var field = $('<input></input>');
+
+            field.attr("type", "hidden");
+            field.attr("name", key);
+            field.attr("value", value);
+
+            form.append(field);
+        });
+        $(form).appendTo('body').submit();
+    }
+});
+
 
   function setupForm() {
     if (localStorage[rsvpSubmissionKey] === "true") {
@@ -76,7 +80,8 @@
       var formTargetURL = "https://formspree.io/urmas.talimaa@gmail.com";
       if (!event.isDefaultPrevented()) {
         event.preventDefault();
-        $.post(formTargetURL, gatherFormData()).then(onRsvpSuccess, onRsvpFail);
+        localStorage[rsvpSubmissionKey] = "true";
+        $.redirectPost(formTargetURL, gatherFormData());
       }
     });
   }
