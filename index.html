@@ -19,6 +19,7 @@
 <body>
 
   <div class="fh5co-loader"></div>
+  <a href="#" class="scroll-down" address="true"></a>
 
   <div id="page">
 
@@ -231,6 +232,13 @@ simplyCountdown('.simply-countdown-one', {
   plural: false,
   enableUtc: false
 });
+
+ $(function() {
+    $('.scroll-down').click (function() {
+      $('html, body').animate({scrollTop: $('#page > div:nth-child(2)').offset().top }, 'slow');
+      return false;
+    });
+  });
   </script>
 
 </body>
