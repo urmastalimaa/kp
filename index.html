@@ -233,8 +233,33 @@ simplyCountdown('.simply-countdown-one', {
 });
 
  $(function() {
+    function anyPartOfElementVisibleInViewport(el) {
+      var top = el.offsetTop;
+      var left = el.offsetLeft;
+      var width = el.offsetWidth;
+      var height = el.offsetHeight;
+
+      while(el.offsetParent) {
+        el = el.offsetParent;
+        top += el.offsetTop;
+        left += el.offsetLeft;
+      }
+
+      return (
+        top < (window.pageYOffset + window.innerHeight) &&
+        left < (window.pageXOffset + window.innerWidth) &&
+        (top + height) > window.pageYOffset &&
+        (left + width) > window.pageXOffset
+      );
+    }
+
+    var firstNonHeader = $("#page > div:nth-child(2");
+    if(anyPartOfElementVisibleInViewport(firstNonHeader[0])) {
+      $('.scroll-down').hide();
+    }
+
     $('.scroll-down').click (function() {
-      $('html, body').animate({scrollTop: $('#page > div:nth-child(2)').offset().top }, 'slow');
+      $('html, body').animate({scrollTop: firstNonHeader.offset().top }, 'slow');
       return false;
     });
   });
